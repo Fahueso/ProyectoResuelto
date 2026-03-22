@@ -1,0 +1,46 @@
+package com.miempresa.modelo;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Persona implements Serializable {
+    protected String nombre;
+    protected String apellidos;
+    protected String dni; // identidad natural de Persona/Empleado
+
+    public Persona() { }
+
+    public Persona(String nombre, String apellidos, String dni) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.dni = dni;
+    }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public String getApellidos() { return apellidos; }
+    public void setApellidos(String apellidos) { this.apellidos = apellidos; }
+
+    public String getDni() { return dni; }
+    public void setDni(String dni) { this.dni = dni; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Persona)) return false;
+        Persona persona = (Persona) o;
+        return Objects.equals(dni, persona.dni);
+    }
+
+    @Override
+    public int hashCode() { return Objects.hash(dni); }
+
+    @Override
+    public String toString() {
+        return "Persona{nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", dni='" + dni + '\'' +
+                '}';
+    }
+}
