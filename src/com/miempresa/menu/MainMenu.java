@@ -22,10 +22,10 @@ public class MainMenu {
 
     //TODO: Genera los menús y descomenta
 
-//    private SedeMenu sedeMenu;              // TODO: implementar por el alumnado
-//    private CategoriaMenu categoriaMenu;    // TODO: implementar por el alumnado
-//    private PuestoMenu puestoMenu;          // TODO: implementar por el alumnado
-//    private EmpleadoMenu empleadoMenu;      // TODO: implementar por el alumnado
+    private SedeMenu sedeMenu;              // TODO: implementar por el alumnado
+    private CategoriaMenu categoriaMenu;    // TODO: implementar por el alumnado
+    private PuestoMenu puestoMenu;          // TODO: implementar por el alumnado
+    private EmpleadoMenu empleadoMenu;      // TODO: implementar por el alumnado
 
     public MainMenu(InputUtils in) {
         this.in = in;
@@ -36,10 +36,10 @@ public class MainMenu {
 
     //TODO: Genera los menús y descomenta
 
-//    public void setSedeMenu(SedeMenu menu) { this.sedeMenu = menu; }                    // TODO
-//    public void setCategoriaMenu(CategoriaMenu menu) { this.categoriaMenu = menu; }     // TODO
-//    public void setPuestoMenu(PuestoMenu menu) { this.puestoMenu = menu; }              // TODO
-//    public void setEmpleadoMenu(EmpleadoMenu menu) { this.empleadoMenu = menu; }        // TODO
+    public void setSedeMenu(SedeMenu menu) { this.sedeMenu = menu; }                    // TODO
+    public void setCategoriaMenu(CategoriaMenu menu) { this.categoriaMenu = menu; }     // TODO
+    public void setPuestoMenu(PuestoMenu menu) { this.puestoMenu = menu; }              // TODO
+    public void setEmpleadoMenu(EmpleadoMenu menu) { this.empleadoMenu = menu; }        // TODO
 
     /**
      * Muestra el menú principal y enruta a los submenús disponibles.
@@ -49,11 +49,11 @@ public class MainMenu {
         int opcion;
         do {
             System.out.println("\n=== MENÚ PRINCIPAL ===");
-            System.out.println("1. Departamentos  (disponible)");
-            System.out.println("2. Sedes          (pendiente por el alumnado)");
-            System.out.println("3. Categorías     (pendiente por el alumnado)");
-            System.out.println("4. Puestos        (pendiente por el alumnado)");
-            System.out.println("5. Empleados      (pendiente por el alumnado)");
+            System.out.println("1. Departamentos  ");
+            System.out.println("2. Sedes     ");
+            System.out.println("3. Categorías ");
+            System.out.println("4. Puestos   ");
+            System.out.println("5. Empleados  ");
             System.out.println("0. Salir");
 
             opcion = in.readInt("Opcion", true);
@@ -64,19 +64,19 @@ public class MainMenu {
                     break;
               case 2:
                   //TODO: Genera los menús y descomenta
-//                    sedeMenu.mostrar();
+                    sedeMenu.mostrar();
                     break;
 
                 case 3:
-//                    categoriaMenu.mostrar();
+                    categoriaMenu.mostrar();
                     break;
 
                 case 4:
-//                    puestoMenu.mostrar();
+                    puestoMenu.mostrar();
                     break;
 
                 case 5:
-//                    empleadoMenu.mostrar();
+                    empleadoMenu.mostrar();
                     break;
 
                 case 0:
@@ -96,19 +96,19 @@ public class MainMenu {
     }
     //TODO: Genera los menús y descomenta
 
-//    public SedeMenu getSedeMenu() {
-//        return sedeMenu;
-//    }
-//
-//    public CategoriaMenu getCategoriaMenu() {
-//        return categoriaMenu;
-//    }
-//
-//    public PuestoMenu getPuestoMenu() {
-//        return puestoMenu;
-//    }
-//
-//    public EmpleadoMenu getEmpleadoMenu() {
-//        return empleadoMenu;
-//    }
+    public SedeMenu getSedeMenu() {
+        return sedeMenu;
+    }
+
+    public CategoriaMenu getCategoriaMenu() {
+        return categoriaMenu;
+    }
+
+    public PuestoMenu getPuestoMenu() {
+        return puestoMenu;
+    }
+
+    public EmpleadoMenu getEmpleadoMenu() {
+        return empleadoMenu;
+    }
 }
